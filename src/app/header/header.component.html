@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span routerLink="/" style="cursor: pointer;">Youtube Clone</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon"
+            routerLink="/upload-video"
+            aria-label="Example icon-button with heart icon">
+      <mat-icon>video_call</mat-icon>
+    </button>
+    <button *ngIf="auth.isLogin; else noAuth"
+            [matMenuTriggerFor]="menu"
+            mat-icon-button class="example-icon"
+            aria-label="Example icon-button with share icon">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="Logout()">Logout</button>
+    </mat-menu>
+    <ng-template #noAuth>
+      <button mat-raised-button routerLink="/login">Login</button>
+      <button mat-raised-button routerLink="/signup" style="margin-left: 5px;">signup</button>
+    </ng-template>
+  </mat-toolbar-row>
+</mat-toolbar>

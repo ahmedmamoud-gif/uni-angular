@@ -1,0 +1,9 @@
+<mat-sidenav-container class="sidenav-container">
+    <app-sidebar></app-sidebar>
+    <section>
+      <div class="video-card" *ngFor="let video of videos" (click)="GoToSingle(video.id)">
+        <video src="{{video?.videoUrl}}#t=0.1" ></video>
+        <div class="title">{{video?.title}}</div>
+      </div>
+    </section>
+</mat-sidenav-container>

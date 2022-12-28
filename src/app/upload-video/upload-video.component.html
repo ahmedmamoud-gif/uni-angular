@@ -1,0 +1,24 @@
+<div class="center">
+    <button mat-button (click)="HandleClick()">Browse Files</button>
+    <input #uploadFile class="browse" mat-button type="file" (change)="HandleVideo($event)" accept="video/*" style="display: none;"/>
+    <table class="table" *ngIf="fileUploaded">
+      <thead>
+      <tr>
+        <th>File Name</th>
+        <th>Size</th>
+        <th>Last Modified</th>
+        <th>Type</th>
+      </tr>
+      </thead>
+      <tbody class="upload-name-style">
+      <tr>
+        <td>{{ file.name }}</td>
+        <td>{{ file.size }}</td>
+        <td>{{ file.lastModifiedDate | date }}</td>
+        <td>{{ file.type}}</td>
+      </tr>
+      </tbody>
+    </table>
+    <button mat-button (click)="uploadVideo()" *ngIf="fileUploaded">Upload Video</button>
+
+</div>

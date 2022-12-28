@@ -1,0 +1,38 @@
+.center {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  height: 86vh;
+  justify-content: center;
+}
+
+.center table {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: clamp(450px, 50vw, 600px);
+}
+.center th {
+  font-size: 22px;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.center td {
+  font-size: 15px;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+.center button {
+  background-color: #eeee;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 50px;
+}
+
+
+.browse {
+  margin-left: 10px;
+}

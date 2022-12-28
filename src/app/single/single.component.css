@@ -1,0 +1,26 @@
+section {
+  height: 93vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-card {
+  width: clamp(200px, 50vw, 700px);
+  height: fit-content;
+  cursor: pointer;
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px 0px #9575cdb8;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 400;
+  color: #0f0f0f;
+  padding: 10px 10px 20px;
+}
